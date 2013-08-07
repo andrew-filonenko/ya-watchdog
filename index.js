@@ -4,8 +4,10 @@ var util = require('util'),
 var Watchdog = function Watchdog(expires) {
   this.expires = expires || 2000;
   this.timeout = null;
-  this.dispose();
+  this.kick();
 };
+
+util.inherits(Watchdog, EventEmitter);
 
 Watchdog.prototype.kick = function kick() {
   if (this.timeout) clearTimeout(this.timeout);
@@ -17,7 +19,5 @@ Watchdog.prototype.dispose = function dispose() {
   if (this.timeout) clearTimeout(this.timeout);
   return this;
 };
-
-util.inherits(Watchdog, EventEmitter);
 
 module.exports = Watchdog;
