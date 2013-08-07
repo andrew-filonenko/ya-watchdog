@@ -1,0 +1,16 @@
+{
+  "name": "ya-watchdog",
+  "version": "0.0.1",
+  "description": "A watchdog timer for node.js (and browserify).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+      "url": "https://github.com/andrew-filonenko/ya-watchdog"
+  },
+  "keywords": [
+    "watchdog",
+    "timeout"
+  ],
+  "author": "Andrey Filonenko",
+  "license": "BSD"
+}
