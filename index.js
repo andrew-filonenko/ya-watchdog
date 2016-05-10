@@ -4,7 +4,6 @@ var util = require('util'),
 var Watchdog = function(expires) {
   this.expires = expires || 2000;
   this._timeout = null;
-  this.kick();
 };
 
 util.inherits(Watchdog, EventEmitter);
